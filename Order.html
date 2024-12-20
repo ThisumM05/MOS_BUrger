@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">   
+    <link rel="stylesheet" href="Order.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav"> 
+          <li class="nav-item"> 
+            <a class="nav-link" aria-current="page" href="#BurgerCard">Burgers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#SubmarineCard">Submarines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#FriesCard">Fries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#PastaCard">Pasta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ChickenCard">Chicken</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#BeverageCard">Bevarages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true" style="padding: 10px; 
+                color: brown;
+                background-color: black;
+                border-radius: 22px;
+                ">
+                Place Order</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-------------------------------------->
+
+      <div class="container-fluid h-100">
+          <div class="row full-height-row h-100">
+              <div class="column1 col-12">
+              </div>
+                  <div class="col-12 highlighted-title">
+                      BURGERS
+                  </div>
+                  <div class="row" id="BurgerCard">
+  
+                  </div>
+                  <div class="col-12 highlighted-title">
+                      SUBMARINES
+                  </div>
+                  <div class="row" id="SubmarineCard">
+  
+                  </div>
+                  <div class="col-12 highlighted-title">
+                      FRIES
+                  </div>
+                  <div class="row" id="FriesCard">
+  
+                  </div>
+                  <div class="col-12 highlighted-title">
+                      PASTA
+                  </div>
+                  <div class="row" id="PastaCard">
+  
+                  </div>
+                  <div class="col-12 highlighted-title">
+                      CHICKEN
+                  </div>
+                  <div class="row" id="ChickenCard">
+  
+                  </div>
+                  <div class="col-12 highlighted-title">
+                      BEVERAGES
+                  </div>
+                  <div class="row" id="BeverageCard">
+  
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="updateModalLabel">Update Item</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form id="updateItemForm">
+                          <input type="hidden" id="item-id" value="">
+                          <div class="mb-3">
+                              <label for="item-name-input" class="form-label">Name</label>
+                              <input type="text" class="form-control" id="item-name-input" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="item-category-input" class="form-label">Category</label>
+                              <input type="text" class="form-control" id="item-category-input" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="item-price-input" class="form-label">Price</label>
+                              <input type="number" class="form-control" id="item-price-input" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="item-discount-input" class="form-label">Discount</label>
+                              <input type="number" class="form-control" id="item-discount-input" value="0" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="item-quantity-input" class="form-label">Quantity</label>
+                              <input type="number" class="form-control" id="item-quantity-input" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="item-expiry-input" class="form-label">Expiry Date</label>
+                              <input type="date" class="form-control" id="item-expiry-input" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="item-image-input" class="form-label">Choose Image</label>
+                              <input type="file" class="form-control" id="item-image-input" accept="image/*"
+                                  onchange="previewImage(event)" required>
+                          </div>
+                          <img id="image-preview" src="" alt="Image Preview">
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary" id="updateButton">Update</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+      <script src="app.js"></script>
+      <script src="MakeOrder.js"></script>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
+</body>
+</html>

@@ -1,0 +1,150 @@
+body{
+    background-image: url(Images/new_burger.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    margin: 1%;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: fit-content;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.navbar:hover {
+    transform: translateY(5px); 
+    box-shadow: 10px 12px 25px rgba(192, 192, 192, 0.3); 
+  }
+
+.bg-body-tertiary{
+    background: aqua;
+    border-radius: 22px;
+}
+
+.navbar-brand{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+    color: brown;
+
+}
+
+.navbar-toggler-icon{
+    padding: 10px;
+    transform: transform 0.3s ease;
+}
+
+.navbar-toggler-icon:hover{
+    transform: translateY(2px) translateX(2px);
+}
+
+.navbar-nav{
+    margin-left: auto;
+    margin-right: 50px;
+    gap: 50px;
+
+}
+
+.nav-item{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    color: black;
+}
+
+.nav-item:hover{
+    font-size: 24.6px;
+    padding: 1px;
+    background-color: brown;
+    transition: background-color 0.3s ease-in-out; 
+    border-radius: 10px;
+
+}
+
+
+.col-9 {
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 400px;
+    margin-bottom: 100px; 
+    padding: 20px;
+    max-width: 90%; 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: center; 
+}
+
+.full-height-row {
+    height: 600vh;
+    top: 400%;
+}
+
+
+.highlighted-title {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    top: 90px;
+}
+
+.card {
+    flex: 1 1 calc(30% - 20px); 
+    max-width: 300px; 
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 175;
+}
+
+.card-body {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .btn {
+    margin-right: 5px;
+    gap: 10px;
+}
+
+#image-preview {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: none;
+}
+
+#searchBar {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
